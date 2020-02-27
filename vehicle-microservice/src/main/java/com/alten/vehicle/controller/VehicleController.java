@@ -1,8 +1,8 @@
-package com.alten.challenge.controller;
+package com.alten.vehicle.controller;
 
-import com.alten.challenge.dto.VehicleDTO;
-import com.alten.challenge.mapper.VehicleMapper;
-import com.alten.challenge.service.VehicleService;
+import com.alten.vehicle.dto.VehicleDTO;
+import com.alten.vehicle.mapper.VehicleMapper;
+import com.alten.vehicle.service.VehicleService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

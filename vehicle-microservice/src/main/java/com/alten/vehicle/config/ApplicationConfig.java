@@ -1,4 +1,4 @@
-package com.alten.challenge.config;
+package com.alten.vehicle.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

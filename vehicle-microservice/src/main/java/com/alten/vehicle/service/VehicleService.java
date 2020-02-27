@@ -1,11 +1,10 @@
-package com.alten.challenge.service;
+package com.alten.vehicle.service;
 
-import com.alten.challenge.model.Vehicle;
-import com.alten.challenge.repository.VehicleRepository;
+import com.alten.vehicle.model.Vehicle;
+import com.alten.vehicle.repository.VehicleRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.List;
 
 

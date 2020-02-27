@@ -1,7 +1,7 @@
-package com.alten.challenge.mapper;
+package com.alten.vehicle.mapper;
 
-import com.alten.challenge.dto.VehicleDTO;
-import com.alten.challenge.model.Vehicle;
+import com.alten.vehicle.dto.VehicleDTO;
+import com.alten.vehicle.model.Vehicle;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

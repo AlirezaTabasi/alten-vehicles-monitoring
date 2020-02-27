@@ -1,4 +1,4 @@
-package com.alten.challenge.model;
+package com.alten.vehicle.model;
 
 import lombok.Getter;
 import lombok.Setter;
