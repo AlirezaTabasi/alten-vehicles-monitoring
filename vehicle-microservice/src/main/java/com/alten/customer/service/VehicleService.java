@@ -1,7 +1,7 @@
-package com.alten.vehicle.service;
+package com.alten.customer.service;
 
-import com.alten.vehicle.model.Vehicle;
-import com.alten.vehicle.repository.VehicleRepository;
+import com.alten.customer.model.Vehicle;
+import com.alten.customer.repository.VehicleRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
-package com.alten.vehicle.repository;
+package com.alten.customer.repository;
 
-import com.alten.vehicle.model.Vehicle;
-import com.alten.vehicle.model.VehicleStatus;
+import com.alten.customer.model.Vehicle;
+import com.alten.customer.model.VehicleStatus;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

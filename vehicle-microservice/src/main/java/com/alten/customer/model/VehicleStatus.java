@@ -1,4 +1,4 @@
-package com.alten.vehicle.model;
+package com.alten.customer.model;
 
 public enum VehicleStatus {
     ONLINE, OFFLINE

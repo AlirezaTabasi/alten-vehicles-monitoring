@@ -1,6 +1,6 @@
-package com.alten.vehicle.dto;
+package com.alten.customer.dto;
 
-import com.alten.vehicle.model.VehicleStatus;
+import com.alten.customer.model.VehicleStatus;
 import lombok.Getter;
 import lombok.Setter;
 

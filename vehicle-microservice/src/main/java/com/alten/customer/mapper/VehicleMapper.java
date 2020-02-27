@@ -1,15 +1,16 @@
-package com.alten.vehicle.mapper;
+package com.alten.customer.mapper;
 
-import com.alten.vehicle.dto.VehicleDTO;
-import com.alten.vehicle.model.Vehicle;
+import com.alten.customer.dto.VehicleDTO;
+import com.alten.customer.model.Vehicle;
+import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@AllArgsConstructor
 public class VehicleMapper {
-    @Autowired
-    private ModelMapper modelMapper;
+
+    private final ModelMapper modelMapper;
 
     public VehicleDTO convertToDto(Vehicle vehicle) {
         return modelMapper.map(vehicle, VehicleDTO.class);

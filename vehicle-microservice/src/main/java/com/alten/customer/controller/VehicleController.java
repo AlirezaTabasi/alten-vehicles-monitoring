@@ -1,8 +1,8 @@
-package com.alten.vehicle.controller;
+package com.alten.customer.controller;
 
-import com.alten.vehicle.dto.VehicleDTO;
-import com.alten.vehicle.mapper.VehicleMapper;
-import com.alten.vehicle.service.VehicleService;
+import com.alten.customer.dto.VehicleDTO;
+import com.alten.customer.mapper.VehicleMapper;
+import com.alten.customer.service.VehicleService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

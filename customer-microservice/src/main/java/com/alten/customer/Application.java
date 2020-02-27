@@ -1,4 +1,4 @@
-package com.alten.vehicle;
+package com.alten.customer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
