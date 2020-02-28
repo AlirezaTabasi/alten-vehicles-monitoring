@@ -48,11 +48,29 @@ Below you have all customers from the system; their addresses and the vehicles t
 
 **Customer address:** Cementvägen 8, 111 11 Södertälje
 
-
 | **VIN (VehicleId)**    |   **Reg. nr.**     |
 |--------------------|----------------|
 | YS2R4X20005399401  |   ABC123       |
 | VLUR4X20009093588  |   DEF456       |
 | VLUR4X20009048066  |  GHI789        |
+
+**Customer name:** Johans Bulk AB
+
+**Customer address:** Balkvägen 12, 222 22 Stockholm
+
+| **VIN (VehicleId)**    |   **Reg. nr.**     |
+|--------------------|----------------|
+| YS2R4X20005388011  |   JKL012       |
+| YS2R4X20005387949  |   MNO345       |
+
+**Customer name:** Haralds Värdetransporter AB
+
+**Customer address:** Budgetvägen 1, 333 33 Uppsala
+
+| **VIN (VehicleId)**    |   **Reg. nr.**     |
+|--------------------|----------------|
+| YS2R4X20005387765  |   PQR678       |
+| YS2R4X20005387055  |   STU901       |
+
 
 
