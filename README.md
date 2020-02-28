@@ -99,5 +99,8 @@ First of all you need to build the below projects.
  |cd service-registry|
  |mvn package        |
  
+| cd service-registry  |   PQR678       |
+| mvn package  |   STU901       |
+ 
 # Production URL
  The live version of the app http://
