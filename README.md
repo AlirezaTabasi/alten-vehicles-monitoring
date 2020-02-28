@@ -94,16 +94,12 @@ The technologies used in the implementation of the project are:
 **ui**: Spring boot, Thymeleaf.
 # Deployment
 First of all you need to build the below projects.
-1.Registry
 
- |-------------------|
- |cd service-registry|
- |mvn package        |
+1.Registry
  
- | **VIN (VehicleId)**    |   **Reg. nr.**     |
-|--------------------|----------------|
-| YS2R4X20005387765  |   PQR678       |
-| YS2R4X20005387055  |   STU901       |
+|cd service-registry|
+|-------------------|
+|mvn package        |
  
 # Production URL
  The live version of the app http://
