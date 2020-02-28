@@ -100,6 +100,30 @@ First of all you need to build the below projects.
   |**cd service-registry**|
   |-------------------|
   |**mvn package**        |
+  
+2.Gateway
  
+  |**cd gateway**|
+  |-------------------|
+  |**mvn package**        |
+ 
+3.Customer
+ 
+  |**cd customer**|
+  |-------------------|
+  |**mvn package**        |
+  
+4.Vehicle
+ 
+  |**cd vehicle**|
+  |-------------------|
+  |**mvn package**        |
+  
+5.UI
+ 
+  |**cd ui**|
+  |-------------------|
+  |**mvn package**        |
+  
 # Production URL
  The live version of the app http://
