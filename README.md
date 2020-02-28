@@ -72,5 +72,70 @@ Below you have all customers from the system; their addresses and the vehicles t
 | YS2R4X20005387765  |   PQR678       |
 | YS2R4X20005387055  |   STU901       |
 
+# Solution Architecture
+# Architecture 
 
+Since the business of the project is highly dynamic. And scaling is important. So I recommend that the application will be cloud compliant. The selection for architecture here will be a Microservice Architecture. And as the load on the application endpoints is not similar. For scaling the project only we can scale some high loaded microservice instead of scaling whole the project.
+![](https://github.com/AlirezaTabasi/alten-vehicles-monitoring/blob/master/Image/architecture.jpg)
+# Technologies
+The related technologies for mentioned Architecture.
+![](https://github.com/AlirezaTabasi/alten-vehicles-monitoring/blob/master/Image/technologies.jpg)
 
+The technologies used in the implementation of the project are:
+
+**gateway**: build over Zuul to load balance and hide the service complexity.
+
+**service registry**: build over Eureka to keep registry with the service instances, also used by the gateway to load balance.
+
+**customer**: Spring boot, h2-database.
+
+**vehicle**: Spring boot, h2-database.
+
+**ui**: Spring boot, Thymeleaf.
+# Deployment
+First of all you need to build the below projects.
+
+1.Registry
+ 
+  - **cd service-registry**
+  
+  - **mvn package**
+  
+2.Gateway
+ 
+  - **cd gateway**
+  
+  - **mvn package**
+ 
+3.Customer
+ 
+  - **cd customer**
+  
+  - **mvn package**
+  
+4.Vehicle
+ 
+  - **cd vehicle**
+  
+  - **mvn package**
+  
+5.UI
+ 
+  - **cd ui**
+  
+  - **mvn package**
+  
+At the end run services respectively as below
+
+  - **java -jar service-registry-1.0.jar**
+  
+  - **java -jar gateway-1.0.jar**
+  
+  - **java -jar customer-1.0.jar**
+  
+  - **java -jar vehicle-1.0.jar**
+  
+  - **java -jar ui-1.0.jar**
+
+# Production URL
+ The live version of the app http://
