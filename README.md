@@ -80,3 +80,11 @@ Since the business of the project is highly dynamic. And scaling is important. S
 # Technologies
 The related technologies for mentioned Architecture.
 ![](https://github.com/AlirezaTabasi/alten-vehicles-monitoring/blob/master/Image/technologies.jpg)
+
+The technologies used in the implementation of the project are:
+
+**gateway**: build over Zuul to load balance and hide the service complexity.
+**service registry**: build over Eureka to keep registry with the service instances, also used by the gateway to load balance.
+**customer**: Spring boot, h2-database.
+**vehicle**: Spring boot, h2-database.
+**ui**: Spring boot, Thymeleaf.
