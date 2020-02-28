@@ -97,45 +97,45 @@ First of all you need to build the below projects.
 
 1.Registry
  
-  |**cd service-registry**|
-  |-------------------|
-  |**mvn package**    |
+  - **cd service-registry**
+  
+  - **mvn package**
   
 2.Gateway
  
-  |**cd gateway**     |
-  |-------------------|
-  |**mvn package**    |
+  - **cd gateway**
+  
+  - **mvn package**
  
 3.Customer
  
-  |**cd customer**    |
-  |-------------------|
-  |**mvn package**    |
+  - **cd customer**
+  
+  - **mvn package**
   
 4.Vehicle
  
-  |**cd vehicle**     |
-  |-------------------|
-  |**mvn package**    |
+  - **cd vehicle**
+  
+  - **mvn package**
   
 5.UI
  
-  |**cd ui**          |
-  |-------------------|
-  |**mvn package**    |
+  - **cd ui**
+  
+  - **mvn package**
   
 At the end run services respectively as below
 
-  |**java -jar service-registry-1.0.jar**|
-  |-------------------|
-  |**java -jar gateway-1.0.jar**|
-  |-------------------|
-  |**java -jar customer-1.0.jar**|
-  |-------------------|
-  |**java -jar vehicle-1.0.jar**|
-  |-------------------|
-  |**java -jar ui-1.0.jar**|
+  - **java -jar service-registry-1.0.jar**
+  
+  - **java -jar gateway-1.0.jar**
+  
+  - **java -jar customer-1.0.jar**
+  
+  - **java -jar vehicle-1.0.jar**
+  
+  - **java -jar ui-1.0.jar**
 
 # Production URL
  The live version of the app http://
