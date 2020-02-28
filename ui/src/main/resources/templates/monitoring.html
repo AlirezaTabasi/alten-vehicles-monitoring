@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <title>Vehicle monitoring Alten</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <img th:src="@{/images/map.png}" style="position:absolute;left:0px;top:0px;">
+            <div th:each="customerVehicle: ${customerVehicles}">
+                <a th:if="${customerVehicle.vehicleId == 1}" href="#" data-toggle="modal"
+                   th:attr="data-target='#modal'+${customerVehicle.getVehicleId()}">
+                    <img th:src="@{/images/car1.png}" style="position:absolute;left:384px;top:43px;">
+                </a>
+                <a th:if="${customerVehicle.vehicleId == 2}" href="#" data-toggle="modal"
+                   th:attr="data-target='#modal'+${customerVehicle.getVehicleId()}">
+                    <img th:src="@{/images/car2.png}" style="position:absolute;left:261px;top:257px;">
+                </a>
+                <a th:if="${customerVehicle.vehicleId == 3}" href="#" data-toggle="modal"
+                   th:attr="data-target='#modal'+${customerVehicle.getVehicleId()}">
+                    <img th:src="@{/images/car3.png}" style="position:absolute;left:237px;top:90px;">
+                </a>
+                <a th:if="${customerVehicle.vehicleId == 4}" href="#" data-toggle="modal"
+                   th:attr="data-target='#modal'+${customerVehicle.getVehicleId()}">
+                    <img th:src="@{/images/car4.png}" style="position:absolute;left:258px;top:535px;">
+                </a>
+                <a th:if="${customerVehicle.vehicleId == 5}" href="#" data-toggle="modal"
+                   th:attr="data-target='#modal'+${customerVehicle.getVehicleId()}">
+                    <img th:src="@{/images/car5.png}" style="position:absolute;left:237px;top:353px;">
+                </a>
+                <a th:if="${customerVehicle.vehicleId == 6}" href="#" data-toggle="modal"
+                   th:attr="data-target='#modal'+${customerVehicle.getVehicleId()}">
+                    <img th:src="@{/images/car6.png}" style="position:absolute;left:337px;top:129px;">
+                </a>
+                <a th:if="${customerVehicle.vehicleId == 7}" href="#" data-toggle="modal"
+                   th:attr="data-target='#modal'+${customerVehicle.getVehicleId()}">
+                    <img th:src="@{/images/car7.png}" style="position:absolute;left:258px;top:435px;">
+                </a>
+            </div>
+        </div>
+        <div class="col-6">
+            <form method="post" action="#" th:action="@{/monitoring/filter}" th:object="${filter}">
+                <div class="form-row align-items-center" style="margin: 20px;">
+                    <div class="col-auto my-1">
+                        <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Status</label>
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" th:field="*{status}">
+                            <option selected value="ALL">Status</option>
+                            <option value="ONLINE">Online</option>
+                            <option value="OFFLINE">Offline</option>
+                        </select>
+                    </div>
+                    <div class="col-auto my-1">
+                        <label class="sr-only" for="inlineFormInputName">Customer Name</label>
+                        <input type="text" class="form-control" id="inlineFormInputName" placeholder="Customer Name"
+                               th:field="*{name}">
+                    </div>
+                    <div class="col-auto my-1">
+                        <button type="submit" class="btn btn-primary">Filter</button>
+                    </div>
+                    <div class="col-auto my-1" style="margin-left: 10px;">
+                        <span style="color: #D9534F;">Next update in: </span>
+                        <span class="code">60 Second</span>
+                    </div>
+                </div>
+            </form>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">VIN</th>
+                    <th scope="col">Reg nr</th>
+                    <th scope="col">Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="customerVehicle: ${customerVehicles}">
+                    <td th:text="${customerVehicle.customerName}"></td>
+                    <td th:text="${customerVehicle.address}"></td>
+                    <td th:text="${customerVehicle.vin}"></td>
+                    <td th:text="${customerVehicle.registrationNumber}"></td>
+                    <td th:if="${customerVehicle.status.name() == 'ONLINE'}" th:text="${customerVehicle.status}"
+                        style="color: #4C8838"></td>
+                    <td th:if="${customerVehicle.status.name() == 'OFFLINE'}" th:text="${customerVehicle.status}"
+                        style="color: #C82D5A"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--<a href="https://www.freepik.com/free-photos-vectors/poster">Poster vector created by macrovector - www.freepik.com</a>-->
+    </div>
+
+    <div th:each="customerVehicle: ${customerVehicles}">
+        <div class="modal fade" th:id="modal + ${customerVehicle.vehicleId}" tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Vehicle Information</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <span style="color: #0069D9;">Customer Name: </span><span
+                                th:text="${customerVehicle.customerName}"></span>
+                        </div>
+                        <div>
+                            <span style="color: #218838;">Address: </span><span
+                                th:text="${customerVehicle.address}"></span>
+                        </div>
+                        <div>
+                            <span style="color: #E0A800;">VIN: </span><span th:text="${customerVehicle.vin}"></span>
+                        </div>
+                        <div>
+                            <span style="color: #C82333;">Reg nr: </span><span
+                                th:text="${customerVehicle.registrationNumber}"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script language="JavaScript">
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+</script>
+
+<script>
+    $({countNum: $('.code').html()}).animate({countNum: 30}, {
+        duration: 30000,
+        easing: 'linear',
+        step: function () {
+            $('.code').html(Math.floor(60 - this.countNum) + " Second");
+        },
+        complete: function () {
+            window.location.href="http://localhost:9090/monitoring";
+        }
+    });
+</script>
+
+</body>
+
+</html>
