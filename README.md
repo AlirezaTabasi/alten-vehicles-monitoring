@@ -44,11 +44,12 @@ This can either be solved by using static values or ​​by creating a separate
 # Data:
 Below you have all customers from the system; their addresses and the vehicles they own.
 
-Customer name: Kalles Grustransporter AB
-Customer address: Cementvägen 8, 111 11 Södertälje
+**Customer name:** Kalles Grustransporter AB
+
+**Customer address:** Cementvägen 8, 111 11 Södertälje
 
 
-| VIN (VehicleId)    |   Reg. nr.     |
+| **VIN (VehicleId)**    |   **Reg. nr.**     |
 |--------------------|----------------|
 | YS2R4X20005399401  |   ABC123       |
 | VLUR4X20009093588  |   DEF456       |
