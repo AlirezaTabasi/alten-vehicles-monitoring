@@ -72,5 +72,6 @@ Below you have all customers from the system; their addresses and the vehicles t
 | YS2R4X20005387765  |   PQR678       |
 | YS2R4X20005387055  |   STU901       |
 
-
+# Solution Architecture
+# Architecture 
 
