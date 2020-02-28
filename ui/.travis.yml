@@ -1,0 +1,6 @@
+language: java
+
+deploy:
+  provider: heroku
+  app: alten-ui-ui
+  api_key: 36bea41f-dc5a-4069-8275-46adb883b603
