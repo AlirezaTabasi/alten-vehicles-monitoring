@@ -75,3 +75,5 @@ Below you have all customers from the system; their addresses and the vehicles t
 # Solution Architecture
 # Architecture 
 
+Since the business of the project is highly dynamic. and scaling is important. So I recommend that the application will be cloud compliant. The selection for architecture here will be a Microservice Architecture. And as the load on the application endpoints is not similar. for scaling the project only we can scale some high loaded microservice instead of scaling whole the project.
+![](https://github.com/AlirezaTabasi/alten-vehicles-monitoring/blob/master/Image/architecture.jpg)
