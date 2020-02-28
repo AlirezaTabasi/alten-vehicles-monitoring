@@ -47,11 +47,11 @@ Below you have all customers from the system; their addresses and the vehicles t
 Customer name: Kalles Grustransporter AB
 Customer address: Cementvägen 8, 111 11 Södertälje
 
-|--------------------|----------------|
+
 | VIN (VehicleId)    |   Reg. nr.     |
 |--------------------|----------------|
 | YS2R4X20005399401  |   ABC123       |
 | VLUR4X20009093588  |   DEF456       |
 | VLUR4X20009048066  |  GHI789        |
-|--------------------|----------------|
+
 
