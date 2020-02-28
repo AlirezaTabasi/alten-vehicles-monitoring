@@ -100,5 +100,10 @@ First of all you need to build the below projects.
  |cd service-registry|
  |mvn package        |
  
+ | **VIN (VehicleId)**    |   **Reg. nr.**     |
+|--------------------|----------------|
+| YS2R4X20005387765  |   PQR678       |
+| YS2R4X20005387055  |   STU901       |
+ 
 # Production URL
  The live version of the app http://
