@@ -95,7 +95,9 @@ The technologies used in the implementation of the project are:
 # Deployment
 First of all you need to build the below projects.
 1.Registry
+
  |cd service-registry|
  |mvn package        |
+ 
 # Production URL
  The live version of the app http://
