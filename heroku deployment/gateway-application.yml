@@ -1,0 +1,42 @@
+server:
+  port: ${PORT:8000}
+
+zuul:
+  ignoredServices: '*'
+  prefix: /api
+  routes:
+    customers:
+      path: /customer/**
+      serviceId: customer
+      strip-prefix: false
+    vehicles:
+      path: /vehicle/**
+      serviceId: vehicle
+      strip-prefix: false
+
+endpoints:
+  routes:
+    sensitive: false
+  trace:
+    sensitive: false
+
+
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://user:Alt3n@alten-challenge-registry.herokuapp.com:}/eureka/
+security:
+  user:
+    password: ${eureka.password}
+endpoints:
+  actuator:
+    enabled: true
+---
+spring:
+  profiles: heroku
+eureka:
+  instance:
+    hostname: ${DOMAIN_NAME:alten-challenge-gateway.herokuapp.com}
+    nonSecurePort: 80
+  password: ${USER_PASSWORD:Gat3way}

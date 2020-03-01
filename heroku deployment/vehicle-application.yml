@@ -1,0 +1,38 @@
+server:
+  port: ${PORT:8082}
+
+spring:
+  datasource:
+    url: jdbc:h2:file:~/vehicle;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+
+  jpa:
+    properties:
+      hibernate:
+        showSql: false
+
+endpoints:
+  actuator:
+    enabled: true
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://user:Alt3n@alten-challenge-registry.herokuapp.com:}/eureka/
+security:
+  user:
+    password: ${eureka.password}
+endpoints:
+  actuator:
+    enabled: true
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+---
+spring:
+  profiles: heroku
+eureka:
+  instance:
+    hostname: ${DOMAIN_NAME:alten-challenge-vehicle.herokuapp.com}
+    nonSecurePort: 80
+  password: ${USER_PASSWORD:V3hicle}
