@@ -32,33 +32,32 @@ public class VehicleRepositoryTest {
     }
 
     @Test
-    public void find_all_by_customer_id() {
+    public void find_all_by_customer_id_test() {
         Vehicle vehicle = getFakeVehicle(VehicleStatus.OFFLINE);
 
         vehicleRepository.save(vehicle);
 
-        int vehicleCount = vehicleRepository.findAllByCustomerID(1L).size();
+        int vehicleCount = vehicleRepository.findAllByCustomerID(-1L).size();
         Assert.assertEquals(vehicleCount, 1);
     }
 
     @Test
-    public void find_all_by_customer_id_and_status() {
+    public void find_all_by_customer_id_and_status_test() {
         Vehicle vehicle = getFakeVehicle(VehicleStatus.OFFLINE);
         vehicleRepository.save(vehicle);
 
-        int vehicleCount = vehicleRepository.findAllByCustomerIDAndStatus(1L, VehicleStatus.OFFLINE).size();
+        int vehicleCount = vehicleRepository.findAllByCustomerIDAndStatus(-1L, VehicleStatus.OFFLINE).size();
         Assert.assertEquals(vehicleCount, 1);
-        vehicleCount = vehicleRepository.findAllByCustomerIDAndStatus(1L, VehicleStatus.ONLINE).size();
+        vehicleCount = vehicleRepository.findAllByCustomerIDAndStatus(-1L, VehicleStatus.ONLINE).size();
         Assert.assertEquals(vehicleCount, 0);
     }
+
     private Vehicle getFakeVehicle(VehicleStatus status) {
         Vehicle vehicle = new Vehicle();
         vehicle.setRegistrationNumber("ABC123");
         vehicle.setVin("YS2R4X20005399401");
-        vehicle.setCustomerID(1L);
+        vehicle.setCustomerID(-1L);
         vehicle.setStatus(status);
         return vehicle;
     }
-
-
 }
