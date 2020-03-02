@@ -138,4 +138,4 @@ At the end run services respectively as below
   - **java -jar ui-1.0.jar**
 
 # Production URL
- The live version of the app http://
+ The live version of the app http://165.22.227.206:8000/monitoring
